@@ -2704,3 +2704,155 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.core.jobs 2 2 2017-08-24 10:25:09.726
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob$ProgressUpdateJob
+!SESSION 2017-08-30 15:22:45.171 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-08-30 15:23:08.064
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:10.115
+!MESSAGE NLS missing message: ContentTypes_errorDialogAlreadyExists in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:18.353
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsets in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:18.353
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showFunctionOffsetsTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:18.368
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytes in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:18.372
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showCodeBytesTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:18.378
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddress in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 15:23:18.378
+!MESSAGE NLS missing message: DisassemblyPreferencePage_showAddressTooltip in: org.eclipse.cdt.dsf.debug.internal.ui.disassembly.DisassemblyMessages
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:25.161
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/arm' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:25.161
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/cf' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:25.171
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/ppc' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:25.171
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:26.732
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/arm' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:26.742
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/cf' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:26.742
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/ppc' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2017-08-30 15:23:26.752
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2017-08-30 15:23:29.852
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 16:03:23.361
+!MESSAGE NLS unused message: trace_trigger_dv_error_title in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY org.eclipse.osgi 2 1 2017-08-30 16:03:23.375
+!MESSAGE NLS unused message: trace_trigger_dv_error_message in: com.freescale.sa.mcu.analysispoints.nls.ui
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2017-08-30 16:10:59.983
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+java.lang.AssertionError: Assertion failed: Getting register location string from different stack frame.
+	at com.freescale.cdt.debug.cw.CWExceptionLogger.logAssert(CWExceptionLogger.java:100)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Register.getLocation(Register.java:551)
+	at org.eclipse.cdt.debug.internal.ui.CDebugUIUtils.getVariableLocation(CDebugUIUtils.java:298)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getVariableLocation(CVariableLabelProvider.java:72)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getColumnText(CVariableLabelProvider.java:85)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getLabel(CVariableLabelProvider.java:48)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.getLabel(ElementLabelProvider.java:312)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.retrieveLabel(ElementLabelProvider.java:215)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelUpdater.run(ElementLabelProvider.java:160)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelJob.run(ElementLabelProvider.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2017-08-30 16:10:59.997
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+java.lang.AssertionError: Assertion failed: Getting register location string from different stack frame.
+	at com.freescale.cdt.debug.cw.CWExceptionLogger.logAssert(CWExceptionLogger.java:100)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Register.getLocation(Register.java:551)
+	at org.eclipse.cdt.debug.internal.ui.CDebugUIUtils.getVariableLocation(CDebugUIUtils.java:298)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getVariableLocation(CVariableLabelProvider.java:72)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getColumnText(CVariableLabelProvider.java:85)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getLabel(CVariableLabelProvider.java:48)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.getLabel(ElementLabelProvider.java:312)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.retrieveLabel(ElementLabelProvider.java:215)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelUpdater.run(ElementLabelProvider.java:160)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelJob.run(ElementLabelProvider.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.freescale.core.debugger.cdt 4 120 2017-08-30 16:11:00.009
+!MESSAGE Error logged from CodeWarrior debugger core:
+!STACK 0
+java.lang.AssertionError: Assertion failed: Getting register location string from different stack frame.
+	at com.freescale.cdt.debug.cw.CWExceptionLogger.logAssert(CWExceptionLogger.java:100)
+	at com.freescale.cdt.debug.cw.core.cdi.model.Register.getLocation(Register.java:551)
+	at org.eclipse.cdt.debug.internal.ui.CDebugUIUtils.getVariableLocation(CDebugUIUtils.java:298)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getVariableLocation(CVariableLabelProvider.java:72)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getColumnText(CVariableLabelProvider.java:85)
+	at org.eclipse.cdt.debug.internal.ui.elements.adapters.CVariableLabelProvider.getLabel(CVariableLabelProvider.java:48)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.getLabel(ElementLabelProvider.java:312)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.retrieveLabel(ElementLabelProvider.java:215)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelUpdater.run(ElementLabelProvider.java:160)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelJob.run(ElementLabelProvider.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.debug.core 4 2 2017-08-30 16:22:25.359
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1265)
+	at org.eclipse.swt.widgets.Display.getThread(Display.java:2606)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:236)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:225)
+	at org.eclipse.cdt.debug.internal.ui.actions.RemoveAllGlobalsActionDelegate.update(RemoveAllGlobalsActionDelegate.java:99)
+	at org.eclipse.cdt.debug.internal.ui.actions.RemoveAllGlobalsActionDelegate.handleDebugEvents(RemoveAllGlobalsActionDelegate.java:131)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.debug.core 4 125 2017-08-30 16:22:25.377
+!MESSAGE An exception occurred while dispatching debug events.
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4361)
+	at org.eclipse.swt.SWT.error(SWT.java:4276)
+	at org.eclipse.swt.SWT.error(SWT.java:4247)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1265)
+	at org.eclipse.swt.widgets.Display.getThread(Display.java:2606)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:236)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:225)
+	at org.eclipse.cdt.debug.internal.ui.actions.RemoveAllGlobalsActionDelegate.update(RemoveAllGlobalsActionDelegate.java:99)
+	at org.eclipse.cdt.debug.internal.ui.actions.RemoveAllGlobalsActionDelegate.handleDebugEvents(RemoveAllGlobalsActionDelegate.java:131)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1109)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1143)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:407)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-08-30 16:22:28.000
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob

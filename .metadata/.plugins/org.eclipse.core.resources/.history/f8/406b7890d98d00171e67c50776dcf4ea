@@ -55,7 +55,9 @@ INCRE				INC   	CONT1
 
 
 DECRE				DEC		CONT1
-						BPL		DISPLAY		
+						LDA		CONT1
+						CMPA	#00
+						BHS		DISPLAY
 						MOV	#$09,CONT1
 					
 DISPLAY			LDA		CONT1

@@ -2170,22 +2170,49 @@ feed_watchdog: MACRO
 ;
 ; variable/data section
 ;
-           			ORG    		RAMStart         ; Insert your data definition here
-Myvar:  		DS.B   		1
+           			ORG    		Z_RAMStart         ; Insert your data definition here
+CONT1:  		DS.B   		1
+
+
 
 ;
 ; code section
 ;
             		ORG     ROMStart
             		
-_Startup:   	LDHX   #RAMEnd+1        ; initialize the stack pointer
+_Startup:   	LDHX   	#RAMEnd+1        ; initialize the stack pointer
             		TXS
             
-            		LDA		SOPT1			;FREE DOG, DESABILITA EL COP
-            		AND		#$3F
-            		STA		SOPT1
+        			LDA			#$02					;FREE DOG, DESABILITA EL COP
+        			STA			SOPT1
+            
+            
+INIT_PORT:	LDA		#$FF				;PUERTO C DE SALIDA
+						STA		PTCDD				;MOV		#$FF,PTCDD
+					    
+					    LDA		#$00				; PUERTO A DE ENTRADA
+						STA		PTADD    
+						
+						CLR		CONT1     		
 
-mainLoop:BRA    mainLoop
+mainLoop:		LDA		PTAD
+						AND	#$01
+						BEQ		DECRE
+INCRE				INC   	CONT1		
+						LDA		CONT1
+						CMPA	#09
+						BLS     DISPLAY
+						CLR		CONT1
+						BRA		DISPLAY
+
+
+DECRE				DEC		CONT1
+						BPL		DISPLAY		
+						MOV	#$09,CONT1
+					
+DISPLAY			LDA		CONT1
+						STA		PTCD
+						BRA    mainLoop
 			
 
 ;**************************************************************
