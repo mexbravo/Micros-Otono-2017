@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-org.eclipse.rse.preferences.order.connections=MSI.Local;MSI.sci_TEST_FLASH_PnE Full Chip Simulator;MSI.sci_TEST_FLASH_PnE Full Chip Simulator Target;MSI.sci_TEST_FLASH_PnE U-MultiLink;MSI.sci_TEST_FLASH_PnE U-MultiLink Target
+org.eclipse.rse.preferences.order.connections=MSI.Local;MSI.RTC_cronometro_FLASH_PnE Full Chip Simulator;MSI.RTC_cronometro_FLASH_PnE Full Chip Simulator Target;MSI.RTC_cronometro_FLASH_PnE U-MultiLink;MSI.RTC_cronometro_FLASH_PnE U-MultiLink Target

@@ -2178,6 +2178,8 @@ ExampleVar: DS.B   1
 ; code section
 ;
             					ORG    			ROMStart
+ 
+            					
   MSG:						DC.B			"HOLA MUNDO",$0A,$0D        
 								DC.B			"CRUEL Y DESPIADADO",$0A,$0D,$00 
 								

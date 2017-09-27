@@ -98,7 +98,7 @@ sci_TEST.obj.s19: $(BBL_SRCS) $(EXECUTABLES)
 
 # Other Targets
 clean:
-	-$(RM) $(S_DEPS_QUOTED) "./*/*.d"  $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) "./*/*.obj"  $(EXECUTABLES_QUOTED) $(S_UPPER_DEPS_QUOTED) $(ProjDirPath)/FLASH/sci_TEST.obj $(ProjDirPath)/FLASH/sci_TEST.args $(ProjDirPath)/FLASH/sci_TEST.obj.args
+	-$(RM) $(S_DEPS_QUOTED) "./*/*.d"  $(BURNER_OUTPUT_OUTPUTS_QUOTED) $(ASM_UPPER_DEPS_QUOTED) "./*/*.obj"  $(EXECUTABLES_QUOTED) $(S_UPPER_DEPS_QUOTED) $(ProjDirPath)/FLASH/sci_TEST.obj $(ProjDirPath)/FLASH/sci_TEST.args $(ProjDirPath)/FLASH/sci_TEST.obj.args $(ProjDirPath)/FLASH/sci_TEST.obj.s19 $(ProjDirPath)/FLASH/sci_TEST.sx
 	-@echo ' '
 
 .PHONY: all clean dependents explicit-dependencies warning-messages
