@@ -2203,7 +2203,7 @@ _Startup:				LDHX   		#RAMEnd+1        ; initialize the stack pointer
         						
         						
         						CLR				SEG
-        						CLR				MIN
+        						CLR				MIN  						;MOV			#$05,MIN
         						CLR				HRS
         						CLR				FLAG
         						
