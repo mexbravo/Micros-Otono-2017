@@ -30,7 +30,7 @@ CRONO:					DS.B		10
 ; code section
 ;
             					ORG    				ROMStart
- WELCOME:			BC.B 				"CRONO IBERO",$0A,$0D,$00          
+ WELCOME:			DC.B 				"CRONO IBERO",$0A,$0D,$00          
 
 _Startup:				LDHX   			#RAMEnd+1       	 ; initialize the stack pointer
             					TXS
@@ -42,7 +42,7 @@ _Startup:				LDHX   			#RAMEnd+1       	 ; initialize the stack pointer
         						STA				ICSSC
             					
             					
-Config:					BRA					INIT							; CONFIGURAR LOS PERIFERICOS
+Config:					BSR				INIT							; CONFIGURAR LOS PERIFERICOS
 
 								CLI													; enable interrupts
 
@@ -123,14 +123,14 @@ INIT_RTC:				MOV			#100,RTCMOD			; inicializa el real time counter
 								MOV			#$1B,RTCSC	
 								MOV			#':',CRONO+2
         						MOV			#':',CRONO+5
-        						MOV			#$0A,CRONO+8
+        						MOV			#$0D,CRONO+8
         						MOV			#$00,CRONO+9
         						CLR				SEG
         						CLR				MIN  						;MOV			#$05,MIN
         						CLR				HRS
         						CLR				FLAG
         						MOV			#$3B,EDOS
-
+								
 
 
 INIT_SCI:				MOV			#$00,SCIBDH				; inicializa puerto serial 19200,8,1,n
@@ -201,49 +201,15 @@ CDAY:						CLR				HRS
 FIN_ISR_RTC:			PULH
 								RTI
 			
-;**************************************************************
-;* spurious - Spurious Interrupt Service Routine.             *
-;*             (unwanted interrupt)                           *
-;**************************************************************
 
-spurious:				; placed here so that security value
-			NOP			; does not change all the time.
-			RTI
 
 ;**************************************************************
 ;*                 Interrupt Vectors                          *
 ;**************************************************************
 
-            ORG					$FFC0
-			DC.W  				spurious			;31	LIBRE
-			DC.W  				spurious			;30	Analog comparator
-			DC.W  				spurious			;29 LIBRE
-			DC.W  				spurious			;28 LIBRE
-			DC.W  				spurious			;27 LIBRE
-			DC.W  				spurious			;26 MTIM overflow
+            ORG					$FFCC
 			DC.W  				ISR_RTC			;25 Real-time interrupt
-			DC.W  				spurious			;24 IIC control
-			DC.W  				spurious			;23 ADC
-			DC.W  				spurious			;22 LIBRE
-			DC.W  				spurious			;21 Port B Pins
-			DC.W  				spurious			;20 Port A Pins
-			DC.W  				spurious			;19 LIBRE
-			DC.W  				spurious			;18 SCI transmit
+			ORG					$FFDC
 			DC.W  				ISR_SCIR			;17 SCI receive
-			DC.W  				spurious			;16 SCI error
-			DC.W  				spurious			;15 SPI
-			DC.W  				spurious			;14 TPM2 overflow
-			DC.W  				spurious			;13 TPM2 channel 1
-			DC.W  				spurious			;12 TPM2 channel 0
-			DC.W  				spurious			;11 TPM1 overflow 
-			DC.W  				spurious			;10 LIBRE
-			DC.W  				spurious			;09 LIBRE
-			DC.W  				spurious			;08 LIBRE
-			DC.W  				spurious			;07 LIBRE
-			DC.W  				spurious			;06 TPM1 channel 1
-			DC.W  				spurious			;05 TPM1 channel 0
-			DC.W  				spurious			;04 LIBRE
-			DC.W  				spurious			;03 Low-voltage warning
-			DC.W  				spurious			;02 IRQ pin
-			DC.W  				spurious			;01 SWI
+			ORG					$FFFE
 			DC.W  				_Startup			;00 Reset
