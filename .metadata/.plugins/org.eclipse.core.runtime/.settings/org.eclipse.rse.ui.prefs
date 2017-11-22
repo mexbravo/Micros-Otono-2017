@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-org.eclipse.rse.preferences.order.connections=MSI.Local;MSI.pwm_test_FLASH_PnE U-MultiLink Target;MSI.prende leds_FLASH_PnE Full Chip Simulator Target;MSI.prende leds_FLASH_PnE U-MultiLink Target;MSI.prende leds_FLASH_PnE Full Chip Simulator;MSI.prende leds_FLASH_PnE U-MultiLink;MSI.pwm_test_FLASH_PnE Full Chip Simulator;MSI.pwm_test_FLASH_PnE Full Chip Simulator Target;MSI.pwm_test_FLASH_PnE U-MultiLink
+org.eclipse.rse.preferences.order.connections=MSI.Local;MSI.sci en c_FLASH_PnE Full Chip Simulator;MSI.sci en c_FLASH_PnE Full Chip Simulator Target;MSI.sci en c_FLASH_PnE U-MultiLink;MSI.sci en c_FLASH_PnE U-MultiLink Target
