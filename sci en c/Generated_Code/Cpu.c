@@ -7,7 +7,7 @@
 **     Version     : Component 01.008, Driver 01.40, CPU db: 3.00.067
 **     Datasheet   : MC9S08SH8 Rev. 3 6/2008
 **     Compiler    : CodeWarrior HCS08 C Compiler
-**     Date/Time   : 2017-11-22, 14:34, # CodeGen: 1
+**     Date/Time   : 2017-11-22, 15:45, # CodeGen: 3
 **     Abstract    :
 **         This component "MC9S08SH8_20" contains initialization 
 **         of the CPU and provides basic methods and events for 
@@ -17,6 +17,7 @@
 **     Contents    :
 **         EnableInt  - void Cpu_EnableInt(void);
 **         DisableInt - void Cpu_DisableInt(void);
+**         Delay100US - void Cpu_Delay100US(word us100);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -127,6 +128,67 @@ void Cpu_EnableInt(void)
 
 **      This method is implemented as macro in the header module. **
 */
+
+/*
+** ===================================================================
+**     Method      :  Cpu_Delay100US (component MC9S08SH8_20)
+**     Description :
+**         This method realizes software delay. The length of delay
+**         is at least 100 microsecond multiply input parameter
+**         [us100]. As the delay implementation is not based on real
+**         clock, the delay time may be increased by interrupt
+**         service routines processed during the delay. The method
+**         is independent on selected speed mode.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         us100           - Number of 100 us delay repetitions.
+**     Returns     : Nothing
+** ===================================================================
+*/
+#pragma NO_ENTRY
+#pragma NO_EXIT
+#pragma MESSAGE DISABLE C5703
+void Cpu_Delay100US(word us100)
+{
+  /* Total irremovable overhead: 16 cycles */
+  /* ldhx: 5 cycles overhead (load parameter into register) */
+  /* jsr:  5 cycles overhead (jump to subroutine) */
+  /* rts:  6 cycles overhead (return from subroutine) */
+
+  /* aproximate irremovable overhead for each 100us cycle (counted) : 8 cycles */
+  /* aix:  2 cycles overhead  */
+  /* cphx: 3 cycles overhead  */
+  /* bne:  3 cycles overhead  */
+  /*lint -save  -e950 -e522 Disable MISRA rule (1.1,14.2) checking. */
+  asm {
+loop:
+    /* 100 us delay block begin */
+    /*
+     * Delay
+     *   - requested                  : 100 us @ 8MHz,
+     *   - possible                   : 800 c, 100000 ns
+     *   - without removable overhead : 792 c, 99000 ns
+     */
+    pshh                               /* (2 c: 250 ns) backup H */
+    pshx                               /* (2 c: 250 ns) backup X */
+    ldhx #$0061                        /* (3 c: 375 ns) number of iterations */
+label0:
+    aix #-1                            /* (2 c: 250 ns) decrement H:X */
+    cphx #0                            /* (3 c: 375 ns) compare it to zero */
+    bne label0                         /* (3 c: 375 ns) repeat 97x */
+    pulx                               /* (3 c: 375 ns) restore X */
+    pulh                               /* (3 c: 375 ns) restore H */
+    nop                                /* (1 c: 125 ns) wait for 1 c */
+    nop                                /* (1 c: 125 ns) wait for 1 c */
+    nop                                /* (1 c: 125 ns) wait for 1 c */
+    /* 100 us delay block end */
+    aix #-1                            /* us100 parameter is passed via H:X registers */
+    cphx #0
+    bne loop                           /* next loop */
+    rts                                /* return from subroutine */
+  }
+  /*lint -restore Enable MISRA rule (1.1,14.2) checking. */
+}
 
 /*
 ** ===================================================================

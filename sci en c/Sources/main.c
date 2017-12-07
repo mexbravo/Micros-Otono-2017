@@ -45,25 +45,27 @@ void main(void)
 byte res;
 byte caso=1;
 word *Mnd;
-const byte MSG[]="Hola Mundo\n\r";
+//const byte MSG[]="Hola Mundo\n\r";
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
   /*** End of Processor Expert internal initialization.                    ***/
  /* byte AS1_SendBlock(const AS1_TComData * Ptr, word Size, word *Snd)*/
   
- /*AS1_SendBlock(MSG, 12, Mnd);*/
+  res=AS1_SendBlock("Hola Mundo\n\r", 12, &Mnd);
   /* Write your code here */
   for(;;) { 
-	  switch (caso) {
+	  Cpu_Delay100US(1000);
+  }
+	 /* switch (caso) {
 	  case 0 :		  res = AS1_SendBlock("Que Bien\n\r", 10, Mnd);
 	  	  	  	  	  	  caso= 4;
 	  	  	  	  	  	  break;
 	  case 1 :		  res = AS1_SendBlock("Que Mal\n\r", 9, Mnd);
 	  	  	  	  	  	  caso= 4;
 	  	  	  	  	  	  break; 	  	  	  	  	  
-	  }
+	  }*/
 	  
-  } 
+  
   
   /* For example: for(;;) { } */
 

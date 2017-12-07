@@ -1,0 +1,33 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="2">
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code/Vectors.c" FileDate="2017-11-29, 15:35:37" FileAge="1511998537318" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2017-12-06, 15:18:06" FileAge="1512602286844" FileType="45637" CompNumb="8" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.prm" FileDate="2017-11-29, 15:35:37" FileAge="1511998537289" FileType="8" CompNumb="8" />
+      <File Name="Documentation/i2c_c_SIGNALS.txt" FileDate="2017-12-06, 19:23:35" FileAge="1512617015725" FileType="3072" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2017-11-29, 15:35:37" FileAge="1511998537158" FileType="45637" />
+      <File Name="Documentation/i2c_c_Settings.xml" FileDate="2017-12-06, 19:23:36" FileAge="1512617016082" FileType="3072" />
+      <File Name="Sources/Events.h" FileDate="2017-11-29, 15:35:37" FileAge="1511998537330" FileType="131328" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2017-11-29, 15:35:37" FileAge="1511998537143" FileType="45637" />
+      <File Name="Generated_Code/CI2C1.h" FileDate="2017-12-06, 19:23:35" FileAge="1512617015374" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2017-11-29, 15:35:37" FileAge="1511998537172" FileType="45637" />
+      <File Name="Documentation/i2c_c.txt" FileDate="2017-12-06, 15:18:06" FileAge="1512602286953" FileType="3072" />
+      <File Name="Sources/Events.c" FileDate="2017-11-29, 15:35:37" FileAge="1511998537337" FileType="131328" />
+      <File Name="Generated_Code/IO_Map.c" FileDate="2017-11-29, 15:35:37" FileAge="1511998537054" FileType="45637" />
+      <File Name="Generated_Code/CI2C1.c" FileDate="2017-12-06, 19:23:35" FileAge="1512617015389" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2017-11-29, 15:35:37" FileAge="1511998537206" FileType="45637" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2017-12-06, 15:18:06" FileAge="1512602286821" FileType="45637" CompNumb="8" />
+      <File Name="Sources/main.c" FileDate="2017-12-06, 19:21:25" FileAge="1512616885318" FileType="128" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>6</CodeGenReference>
+</CodeGenerationInfo>

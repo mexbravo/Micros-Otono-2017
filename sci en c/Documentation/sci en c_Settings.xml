@@ -398,7 +398,7 @@ asm(BGND);
         <ClearPartialPowerDownFlag v="don&amp;apos;t generate code" />
         <GetIdentification v="don&amp;apos;t generate code" />
         <SetBackdoorKey v="don&amp;apos;t generate code" />
-        <Delay100US v="don&amp;apos;t generate code" />
+        <Delay100US v="generate code" />
       </list>
     </Methods>
     <Events>
